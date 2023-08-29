@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilos específicos para a página de habilidades */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    .section {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 50px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+    .skill-item {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border-radius: 5px;
+    }
+    .skill-item:hover {
+      background-color: #f0f0f0;
+    }
+    .active {
+      background-color: #f0f0f0;
+    }
+    .skill-description {
+      font-size: 14px;
+      color: #333;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="menu-toggle">
+    <div class="hamburger"></div>
+</div>
+
+<!-- Menu -->
+<div class="navbar">
+    <ul class="nav-list">
+        <li class="nav-item"><a href="index.html#home">Home</a></li>
+        <li class="nav-item"><a href="sobre.html">Sobre mim</a></li>
+        <li class="nav-item"><a href="habilidades.html">Habilidades</a></li>
+        <li class="nav-item"><a href="index.html#contato">Contato</a></li>
+    </ul>
+</div>
+
+<section id="habilidades" class="section">
+    <div class="profile-info">
+        <div class="skills">
+            <h1>Habilidades</h1>
+            <div class="skill-item" id="react">
+                <h2>Dev Fullstack</h2>
+                <p class="skill-description">Clique para ver detalhes</p>
+            </div>
+            <!-- Adicione os demais tópicos de habilidades aqui -->
+        </div>
+    </div>
+</section>
+
+<!-- Rodapé -->
+<footer class="footer">
+    <img src="senac.png" alt="Left Image" class="footer-image-left">
+    <h2>Acesse minhas redes sociais:</h2>
+    <div class="social-media">
+      <a href="https://www.linkedin.com/in/allancrasso" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+      <a href="https://github.com/allancrasso" target="_blank"><img src="github.png" alt="GitHub"></a>
+    </div>
+    <img src="alura.jfif" alt="Right Image" class="footer-image-right">
+  
+  </footer>
+  
+<script src="app.js"></script>
+<script>
+    // Código JavaScript para mostrar detalhes das habilidades
+    const skillItems = document.querySelectorAll('.skill-item');
+
+    skillItems.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('active');
+            const description = item.querySelector('.skill-description');
+            if (item.classList.contains('active')) {
+                description.textContent = 'Minha carreira de desenvolveldor começa em 2005 quando inicio meu estágio em Java no Banco da Amazônia. Hoje desenvolvo aplicativos web utilizando: ReactJS, NodeJS, TypeScript e Python nas Lojas Quero-Quero';
+            } else {
+                description.textContent = 'Clique para ver detalhes';
+            }
+        });
+        
+    });
+</script>
+
+</body>
+</html>
+

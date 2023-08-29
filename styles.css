@@ -1,0 +1,207 @@
+/* Estilos gerais */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: black;
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Estilos para a navegação */
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline;
+  margin-right: 20px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Estilos para as seções */
+.section {
+  padding: 50px;
+}
+
+/* Estilos para a seção Home */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  height: 100vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 225px;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.text {
+  width: 100%;
+  text-align: left;
+}
+
+.text h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  color: #ffffff;
+}
+
+.text p {
+  font-size: 16px;
+  color: rgb(243, 238, 238);
+  margin-bottom: 10px;
+}
+
+.text ul {
+  list-style-type: disc;
+  margin-left: 30px;
+  font-size: 16px;
+  color: rgb(241, 234, 234);
+  margin-bottom: 20px;
+}
+
+.social-media-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+/* Estilizando os links das redes sociais */
+.social-media a {
+  color: #40e0d0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.social-media a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #353333;
+  padding: 5px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row; /* Alterado para flex-direction: row */
+}
+
+.footer h2 {
+  font-size: 24px;
+  
+ 
+margin: 0;
+  color: #e4e4e4;
+}
+
+.footer-image {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px; /* Adicionado um espaçamento horizontal */
+}
+
+.footer-image-left {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.footer-image-right {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.footer-image-left,
+.footer-image-right{
+  width: 50px;
+}
+
+/* Estilos para dispositivos menores */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 20px;
+  }
+
+  .profile-info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .text h1 {
+    font-size: 20px;
+  }
+
+  .text p,
+  .text ul {
+    font-size: 12px;
+  }
+
+  .social-media img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+
+  /* Mostra o botão do menu hamburguer por padrão */
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  /* Quando o menu hamburguer estiver aberto, mostra o navbar */
+  .menu-open .navbar {
+    display: block;
+    width: 100%;
+  }
+
+  /* Esconde o navbar em telas menores */
+  .navbar {
+    display: none;
+    position: fixed;
+    background-color: #333;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .hamburger {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+}
